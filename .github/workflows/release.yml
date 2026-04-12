@@ -10,9 +10,12 @@ jobs:
     permissions:
       contents: write
       pull-requests: read
-    uses: github-community-projects/ospo-reusable-workflows/.github/workflows/release.yaml@a0cf79bd8756e0a9c1555bf4975eae7ce7a8e8dc
+    uses: github-community-projects/ospo-reusable-workflows/.github/workflows/release.yaml@613657f4f026e3b7086f22ce395ef7d2eb1f8321
     with:
       publish: true
-      release-config-name: release-drafter.yml
+      goreleaser-config-path: .go-releaser.yaml
+      go-version-file: go.mod
+      create-attestation: true
+      release-config-name: release-drafter.yaml
     secrets:
       github-token: ${{ secrets.GITHUB_TOKEN }}

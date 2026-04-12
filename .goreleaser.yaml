@@ -35,15 +35,11 @@ archives:
       - goos: windows
         format: zip
 
-changelog:
-  sort: asc
-  filters:
-    exclude:
-      - "^docs:"
-      - "^test:"
+checksum:
+  name_template: "checksums.txt"
 
 release:
-  prerelease: auto
+  disable: true
 
-universal_binaries:
-  - replace: true
+changelog:
+  disable: true

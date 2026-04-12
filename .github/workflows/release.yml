@@ -14,7 +14,7 @@ jobs:
       id-token: write       # only needed if creating attestations
       attestations: write   # only needed if creating attestations
       discussions: write    # only needed if creating discussions
-    uses: github-community-projects/ospo-reusable-workflows/.github/workflows/release.yaml@53a0992ac0c00ba6034a40916b5babb03578fa73
+    uses: github-community-projects/ospo-reusable-workflows/.github/workflows/release.yaml@ac9d6394400b74111edb4e66bd9a06e0f13951da
     with:
       publish: true
       goreleaser-config-path: .goreleaser.yaml

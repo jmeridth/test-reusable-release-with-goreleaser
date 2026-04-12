@@ -10,8 +10,10 @@ jobs:
     permissions:
       contents: write
       pull-requests: read
+      packages: write       # only needed if building images
       id-token: write       # only needed if creating attestations
       attestations: write   # only needed if creating attestations
+      discussions: write    # only needed if creating discussions
     uses: github-community-projects/ospo-reusable-workflows/.github/workflows/release.yaml@613657f4f026e3b7086f22ce395ef7d2eb1f8321
     with:
       publish: true
